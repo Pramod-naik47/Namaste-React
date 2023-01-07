@@ -1,6 +1,9 @@
+import React from "react";
+import  ReactDOM  from "react-dom/client";
+
 const heading1 = React.createElement(
-    tagName = "h1",
-    options = {
+    "h1",
+    {
         id : "title1",
         key : "title1"
     },
@@ -8,8 +11,8 @@ const heading1 = React.createElement(
 );
 
 const heading2 = React.createElement(
-    tagName = "h2",
-    options = {
+    "h2",
+    {
         id : "title2",
         key : "title2"
     },
@@ -17,9 +20,8 @@ const heading2 = React.createElement(
 );
 
 const container = React.createElement(
-    tagName = "div",
-
-    options = {
+    "div",
+    {
         id : "container"
     },
     [heading1, heading2]
