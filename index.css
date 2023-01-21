@@ -32,7 +32,16 @@
 .restaurant-card > img {
     width: 100%;
 }
+
 .restaurent-list {
     display: flex;
     flex-wrap: wrap;
+}
+
+.search-container {
+    padding: 10px;
+}
+
+.search-container > button {
+    padding-left: 3px !important;
 }
