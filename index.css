@@ -45,3 +45,22 @@
 .search-container > button {
     padding-left: 3px !important;
 }
+
+.shimmer-card {
+    width: 200px;
+    height: 200px;
+    background-color: lightgray;
+    margin: 20px;
+}
+
+.restaurant-menu {
+    display: flex;
+    padding:  10px;
+    margin: 10px;
+}
+
+.card-link{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}

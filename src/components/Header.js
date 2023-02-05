@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Title  from "./Title";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
     const [isLoggedin, setIsLoggedIn] = useState(false)
@@ -8,9 +9,9 @@ export const Header = () => {
             <Title/>
             <div className="nav-items">
                 <ul>
-                    <ol>Home</ol>
-                    <ol>About us</ol>
-                    <ol>Contact us</ol>
+                    <ol><Link to="/">Home</Link> </ol>
+                    <ol><Link to="/about">About us</Link></ol>
+                    <ol><Link to="/contact"> Contact us</Link></ol>
                     <ol>Cart</ol>
                 </ul>
             </div>
