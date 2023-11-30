@@ -1,22 +1,11 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { IMG_CDN_URL } from "../constant";
+import useRestaurant from "../utils/useRestaurant";
 
 const RestaurantMenu = () => {
-  const [restaurant, setRestaurant] = useState(null);
   const { id } = useParams();
 
-  useEffect(() => {
-    GetRestaurantDetails();
-  }, []);
-
-  async function GetRestaurantDetails() {
-    const data = await fetch(
-      `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.892292&lng=74.847836&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`
-    );
-    const json = await data.json();
-    setRestaurant(json?.data);
-  }
+  const restaurant = useRestaurant(id);
 
   if (!restaurant) return null
   return (
