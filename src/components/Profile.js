@@ -1,9 +1,20 @@
-const Profile = () => {
-    return(
-        <div>
-            <h1>Profile</h1>
-        </div>
-    )
-}
+import { useEffect } from "react";
 
-export default Profile
+const Profile = ({ name, type, childType }) => {
+
+  useEffect(() => {
+    console.log(`${childType} - useEffect`);
+  })
+
+  console.log(`${childType} - render`);
+  return (
+    <>
+      <h3>Profile</h3>
+      <h5>Name : {name} </h5>
+      <h6>Component type : {type} </h6>
+      <hr/>
+    </>
+  );
+};
+
+export default Profile;
