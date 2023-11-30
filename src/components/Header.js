@@ -13,6 +13,7 @@ export const Header = () => {
                     <ol><Link to="/about">About us</Link></ol>
                     <ol><Link to="/contact"> Contact us</Link></ol>
                     <ol>Cart</ol>
+                    <ol><Link to="/instamart">Instamart</Link></ol>
                 </ul>
             </div>
             {
