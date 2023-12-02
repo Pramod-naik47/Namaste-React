@@ -1,6 +1,7 @@
 import React from "react";
 import ProfileFunctionalComponent from "./Profile";
 import ProfileClassComponent from "./ProfileClass";
+import UserContext from "../utils/userContext";
 
 class About extends React.Component {
   constructor(props) {
@@ -23,6 +24,10 @@ class About extends React.Component {
           name={"Sam"}
           type={"Class component"}
         />
+        <UserContext.Consumer>
+          {({user}) => <h1>{user.name}</h1>}
+        </UserContext.Consumer>
+        <h1></h1>
       </>
     );
   }
